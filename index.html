@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea House</title>
     <script src="https://kit.fontawesome.com/014e5a97b0.js" crossorigin="anonymous"></script>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="Manrope">
 
 <main class="w-4/5 mx-auto">
     <header class="grid md:grid-cols-2 justify-between items-center mt-5">
@@ -229,12 +234,14 @@
 
  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+   const defaultTheme = require('tailwindcss/defaultTheme')
+
+    module.exports = {
       theme: {
         extend: {
-          colors: {
-            clifford: '#da373d',
-          }
+          fontFamily: {
+            'Manrope': ['"Manrope"', ...defaultTheme.fontFamily.sans],
+          },
         }
       }
     }
